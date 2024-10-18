@@ -9,6 +9,4 @@
 /talks.snm
 /talks.toc
 /_minted-talks/
-/testfile1.pdf
-/testfile2.pdf
-/testfile3.pdf
+/slides/*.pdf
