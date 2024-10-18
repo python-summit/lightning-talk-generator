@@ -6,20 +6,20 @@
 \begin{document}
 
 ((* for speaker, title, pdf, next_speaker in entries *))
-\begin{frame}{Lightning Talk (( loop.index )) of
-        (( entries | length ))}
-    \begin{center}
-        {\Huge (( speaker ))} \\[1em]
-        {\huge (( title ))}
-        ((* if next_speaker *))
-        \vspace{1cm}
-        {\Large \emph{Next: (( next_speaker ))}}
-        ((* endif *))
-    \end{center}
-\end{frame}
-((* if pdf *))
-\includepdf[pages=-]{(( pdf ))}
-((* endif *))
+    \begin{frame}{Lightning Talk (( loop.index )) of
+            (( entries | length ))}
+        \begin{center}
+            {\Huge (( speaker ))} \\[1em]
+            {\huge (( title ))}
+            ((* if next_speaker *))
+                \vspace{1cm}
+                {\Large \emph{Next: (( next_speaker ))}}
+            ((* endif *))
+        \end{center}
+    \end{frame}
+    ((* if pdf *))
+        \includepdf[pages=-]{(( pdf ))}
+    ((* endif *))
 ((* endfor *))
 
 \newcommand{\quine}[4][python]{%
