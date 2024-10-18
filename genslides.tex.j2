@@ -1,0 +1,20 @@
+\documentclass{beamer}
+\usepackage{pdfpages}
+
+\begin{document}
+
+((* for speaker, title, pdf, next_speaker in entries *))
+\begin{frame}
+    \frametitle{(( title ))}
+    \begin{center}
+        \textbf{Speaker: (( speaker ))}
+        ((* if next_speaker *))
+        \vspace{1cm}
+        \textit{Next Speaker: (( next_speaker ))}
+        ((* endif *))
+    \end{center}
+\end{frame}
+\includepdf[pages=-]{(( pdf ))}
+((* endfor *))
+
+\end{document}

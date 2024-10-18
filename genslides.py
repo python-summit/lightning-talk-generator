@@ -15,29 +15,6 @@ TALKS: list[tuple[str, str, str]] = [
     # ("Florian Bruhin", "A .py/.tex/.pdf quine", "testfile7.pdf"),
 ]
 
-latex_template = r"""
-\documentclass{beamer}
-\usepackage{pdfpages}
-
-\begin{document}
-
-((* for speaker, title, pdf, next_speaker in entries *))
-\begin{frame}
-    \frametitle{(( title ))}
-    \begin{center}
-        \textbf{Speaker: (( speaker ))}
-        ((* if next_speaker *))
-        \vspace{1cm}
-        \textit{Next Speaker: (( next_speaker ))}
-        ((* endif *))
-    \end{center}
-\end{frame}
-\includepdf[pages=-]{(( pdf ))}
-((* endfor *))
-
-\end{document}
-"""
-
 
 def main() -> None:
     talks = [
@@ -56,7 +33,7 @@ def main() -> None:
         comment_end_string="=))",
         autoescape=False,
     )
-    template = env.from_string(latex_template)
+    template = env.from_string(Path("genslides.tex.j2").read_text())
     tex_src = template.render(entries=talks)
 
     with tempfile.TemporaryDirectory() as tempdir:
