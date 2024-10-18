@@ -2,9 +2,9 @@
 \usepackage{pdfpages}
 \usepackage{cmbright}
 \usepackage{minted}
+\usepackage{hyperref}
 
 \begin{document}
-
 ((* for speaker, title, pdf, next_speaker in entries *))
     \begin{frame}{Lightning Talk (( loop.index )) of
             (( entries | length ))}
@@ -33,19 +33,18 @@
 \quine{genslides.py}{24}{35}  % jinja
 \quine{genslides.py}{37}{47}  % build / main
 
-\quine[tex]{genslides.tex.j2}{1}{6}    % preamble
+\quine[tex]{genslides.tex.j2}{1}{7}    % preamble
 \quine[tex]{genslides.tex.j2}{8}{23}   % slide
 \quine[tex]{genslides.tex.j2}{25}{38}  % quine
 
-\begin{frame}{CCC Hackerethik}{}
-    {\large Man kann mit einem Computer Kunst und
-    Schönheit schaffen. / You can create art and
-    beauty on a computer.} \\[.2em]
+\begin{frame}{CCC Hackerethik}
+Man kann mit einem Computer Kunst und
+Schönheit schaffen. \\
+You can create art and beauty on a computer.
 
-    % https://www.ccc.de/de/hackerethics
-    % https://www.ccc.de/en/hackerethics
+{\scriptsize \url{https://www.ccc.de/de/hackerethics} /
+\url{https://www.ccc.de/en/hackerethics}} \\[.2em]
 
-    \inputminted[firstline=40,linenos]{tex}{
-        genslides.tex.j2}
+\inputminted[firstline=40,linenos]{tex}{genslides.tex.j2}
 \end{frame}
 \end{document}
