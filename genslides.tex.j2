@@ -1,16 +1,17 @@
 \documentclass{beamer}
 \usepackage{pdfpages}
+\usepackage{cmbright}
 
 \begin{document}
 
 ((* for speaker, title, pdf, next_speaker in entries *))
-\begin{frame}
-    \frametitle{(( title ))}
+\begin{frame}{Lightning Talk (( loop.index )) of (( entries | length ))}
     \begin{center}
-        \textbf{Speaker: (( speaker ))}
+        {\Huge (( speaker ))} \\[1em]
+        {\huge (( title ))}
         ((* if next_speaker *))
         \vspace{1cm}
-        \textit{Next Speaker: (( next_speaker ))}
+        {\Large \emph{Next: (( next_speaker ))}}
         ((* endif *))
     \end{center}
 \end{frame}
