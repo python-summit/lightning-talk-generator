@@ -4,12 +4,17 @@ from jinja2 import Environment
 
 
 TALKS: list[tuple[str, str, str | None]] = [
-    ("Speaker 1", "Title 1", "testfile1.pdf"),
-    ("Speaker 2", "Title 2", "testfile2.pdf"),
-    ("Speaker 3", "Title 3", "testfile3.pdf"),
-    # ("Speaker 4", "Title 4", "testfile4.pdf"),
-    # ("Speaker 5", "Title 5", "testfile5.pdf"),
-    # ("Speaker 6", "Title 6", "testfile6.pdf"),
+    ("Stefan Keller", "Pythons and Ducks!", "Lightning_Talk_Stefan_Keller_Pythons_and_Ducks.pdf"),
+    ("Dominik Gresch", "Better Autocomplete with Type Hints", "better_autocomplete_with_type_hints.pdf"),
+    ("Tamara Reuveni Mazig", "Topic Modelling for Customer experience", None),  # FIXME
+    ("Jan Werth", r"AI \& our Brain $\rightarrow$ not quite there yet", None),  # FIXME
+    ("Simon Niederberger", r"Jupyter \& Git", None),  # FIXME
+    ("Vita Midori", "ML at Demokratis.ch", None),  # FIXME
+    ("Tim Head", "Zero Code Change Acceleration", None),  # FIXME
+    # ("Florian Bruhin", "fstring.help", None),  # FIXME
+    # ("Timon Erhart", "Data Dashboard in 5min", None),  # FIXME
+    # ("Josua Schmid", "Funny Slides for Data Scientist", "2024-10-18 Funny Slides for Data Scientists.pdf"),
+    # (..., ..., ...)
     ("Florian Bruhin", "A .py/.tex/.pdf quine", None),
 ]
 

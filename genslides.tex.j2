@@ -28,14 +28,15 @@
   \end{frame}
 }
 
-\quine{genslides.py}{1}{14}   % imports/TALKS
-\quine{genslides.py}{17}{22}  % setting talks=
-\quine{genslides.py}{24}{35}  % jinja
-\quine{genslides.py}{37}{47}  % build / main
+\quine{genslides.py}{1}{3}   % imports
+\quine{genslides.py}{6}{19}   % TALKS
+\quine{genslides.py}{22}{27}  % setting talks=
+\quine{genslides.py}{29}{40}  % jinja
+\quine{genslides.py}{42}{52}  % build / main
 
 \quine[tex]{genslides.tex.j2}{1}{7}    % preamble
 \quine[tex]{genslides.tex.j2}{8}{23}   % slide
-\quine[tex]{genslides.tex.j2}{25}{38}  % quine
+\quine[tex]{genslides.tex.j2}{25}{39}  % quine
 
 \begin{frame}{CCC Hackerethik}
 Man kann mit einem Computer Kunst und
@@ -45,6 +46,6 @@ You can create art and beauty on a computer.
 {\scriptsize \url{https://www.ccc.de/de/hackerethics} /
 \url{https://www.ccc.de/en/hackerethics}} \\[.2em]
 
-\inputminted[firstline=40,linenos]{tex}{genslides.tex.j2}
+\inputminted[firstline=41,linenos]{tex}{genslides.tex.j2}
 \end{frame}
 \end{document}
