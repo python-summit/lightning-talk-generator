@@ -10,7 +10,7 @@ TALKS: list[tuple[str, str, str]] = [
     # ("Speaker 4", "Title 4", "testfile4.pdf"),
     # ("Speaker 5", "Title 5", "testfile5.pdf"),
     # ("Speaker 6", "Title 6", "testfile6.pdf"),
-    # ("Florian Bruhin", "A .py/.tex/.pdf quine", "testfile7.pdf"),
+    ("Florian Bruhin", "A .py/.tex/.pdf quine", None),
 ]
 
 
