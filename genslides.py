@@ -12,7 +12,7 @@ TALKS: list[tuple[str, str, str | None]] = [
     ("Josua Schmid", "Funny Slides for Data Scientist", "2024-10-18 Funny Slides for Data Scientists.pdf"),
     ("Ricardo Pereira", "Python Superset", "PythonSuperset.pdf"),
     ("Stefan Keller", "Pythons and Ducks!", "Lightning_Talk_Stefan_Keller_Pythons_and_Ducks.pdf"),
-    ("Tamara Reuveni Mazig", "Topic Modelling for Customer experience", "Lightning Talk Tamara Reuveni Mazig.pptx.pdf"),
+    ("Tamara Reuveni Mazig", "Topic Modelling for Customer experience", "Lightning Talk Tamara Reuveni Mazig.pdf"),
     ("Jan Werth", r"AI \& our Brain $\rightarrow$ not quite there yet", None),  # FIXME
     ("Florian Bruhin", "fstring.help", "fstring-help.pdf"),
     ("Florian Bruhin", "A .py/.tex/.pdf quine", None),
