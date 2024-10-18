@@ -1,11 +1,13 @@
 \documentclass{beamer}
 \usepackage{pdfpages}
 \usepackage{cmbright}
+\usepackage{minted}
 
 \begin{document}
 
 ((* for speaker, title, pdf, next_speaker in entries *))
-\begin{frame}{Lightning Talk (( loop.index )) of (( entries | length ))}
+\begin{frame}{Lightning Talk (( loop.index )) of
+        (( entries | length ))}
     \begin{center}
         {\Huge (( speaker ))} \\[1em]
         {\huge (( title ))}
@@ -19,5 +21,20 @@
 \includepdf[pages=-]{(( pdf ))}
 ((* endif *))
 ((* endfor *))
+
+\newcommand{\quine}[4][python]{%
+    \begin{frame}{#2}
+        \inputminted[firstline=#3,lastline=#4]{#1}{#2}
+    \end{frame}
+}
+
+\quine{genslides.py}{1}{14}  % imports/TALKS
+\quine{genslides.py}{17}{22}  % setting talks=
+\quine{genslides.py}{24}{35}  % jinja
+\quine{genslides.py}{37}{47}  % build / main
+
+\quine[tex]{genslides.tex.j2}{1}{6}  % preamble
+\quine[tex]{genslides.tex.j2}{8}{23}  % slide
+\quine[tex]{genslides.tex.j2}{25}{38}  % quine
 
 \end{document}
