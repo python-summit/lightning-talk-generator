@@ -1,1 +1,11 @@
-*.pdf
+/talks.pdf
+/talks.aux
+/talks.fdb_latexmk
+/talks.log
+/talks.out
+/talks.tex
+/talks.fls
+/_minted-talks/
+/testfile1.pdf
+/testfile2.pdf
+/testfile3.pdf
