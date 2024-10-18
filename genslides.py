@@ -8,8 +8,8 @@ TALKS: list[tuple[str, str, str | None]] = [
     ("Dominik Gresch", "Better Autocomplete with Type Hints", "better_autocomplete_with_type_hints.pdf"),
     ("Tamara Reuveni Mazig", "Topic Modelling for Customer experience", None),  # FIXME
     ("Jan Werth", r"AI \& our Brain $\rightarrow$ not quite there yet", None),  # FIXME
-    ("Simon Niederberger", r"Jupyter \& Git", None),  # FIXME
-    ("Vita Midori", "ML at Demokratis.ch", None),  # FIXME
+    ("Simon Niederberger", r"Jupyter \& Git", "presentation.pdf"),
+    ("Vita Midori", "ML at Demokratis.ch", "Vita Midori - ML at Demokratis.pdf"),
     ("Tim Head", "Zero Code Change Acceleration", None),  # FIXME
     # ("Florian Bruhin", "fstring.help", None),  # FIXME
     # ("Timon Erhart", "Data Dashboard in 5min", None),  # FIXME
