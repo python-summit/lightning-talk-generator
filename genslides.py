@@ -17,9 +17,8 @@ TALKS: list[tuple[str, str, str]] = [
 def main() -> None:
     talks = [
         (speaker, title, pdf, next_speaker)
-        for (speaker, title, pdf), (next_speaker, _, _) in zip(
-            TALKS, TALKS[1:] + [("", "", None)]
-        )
+        for (speaker, title, pdf), (next_speaker, _, _)
+        in zip(TALKS, TALKS[1:] + [("", "", None)])
     ]
 
     env = Environment(
@@ -31,13 +30,17 @@ def main() -> None:
         comment_end_string="=))",
         autoescape=False,
     )
-    template = env.from_string(Path("genslides.tex.j2").read_text())
+    j2_src = Path("genslides.tex.j2").read_text()
+    template = env.from_string(j2_src)
     tex_src = template.render(entries=talks)
 
-    tex_file_path = Path("talks.tex")
-    tex_file_path.write_text(tex_src)
+    tex_path = Path("talks.tex")
+    tex_path.write_text(tex_src)
 
-    subprocess.run(["latexmk", "-pdf", "-shell-escape", tex_file_path], check=True)
+    subprocess.run(
+        ["latexmk", "-pdf", "-shell-escape", tex_path],
+        check=True,
+    )
 
 
 if __name__ == "__main__":
