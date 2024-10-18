@@ -5,7 +5,7 @@ from pathlib import Path
 from jinja2 import Environment
 
 
-TALKS: list[tuple[str, str, str]] = [
+TALKS: list[tuple[str, str, str | None]] = [
     ("Speaker 1", "Title 1", "testfile1.pdf"),
     ("Speaker 2", "Title 2", "testfile2.pdf"),
     ("Speaker 3", "Title 3", "testfile3.pdf"),
@@ -18,9 +18,9 @@ TALKS: list[tuple[str, str, str]] = [
 
 def main() -> None:
     talks = [
-        (speaker, title, Path(pdf).resolve(), next_speaker)
+        (speaker, title, Path(pdf).resolve() if pdf else None, next_speaker)
         for (speaker, title, pdf), (next_speaker, _, _) in zip(
-            TALKS, TALKS[1:] + [("", "", "")]
+            TALKS, TALKS[1:] + [("", "", None)]
         )
     ]
 
